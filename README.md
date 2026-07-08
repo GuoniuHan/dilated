@@ -25,6 +25,11 @@ numbers; and a multiplicative Bessel family. As an application, we settle a
 conjecture of Chapoton and the author on the roots of the Poupard and Kreweras
 polynomials.
 
+
+## The full paper
+
+The complete paper is available here: [`dilated.pdf`](dilated.pdf).
+
 ## Check formulas
 
 Each formula of the paper has a standalone [SageMath](https://www.sagemath.org)
@@ -45,7 +50,7 @@ approximation. The parameters ($`\rho,\alpha,\beta`$, the step $`r`$, the row in
 $`x_i`$, …) are set at the top of each file and may be freely changed. A saved run
 with `N = 5` is stored alongside each program in [`output/`](output).
 
-### Section 4 — the Beta family (`d02beta.tex`)
+### Section 4 — the Beta family
 
 | Statement | Sequence / parameters | Program | Output |
 |---|---|---|---|
@@ -60,7 +65,7 @@ with `N = 5` is stored alongside each program in [`output/`](output).
 | Identity (4.16) | $`a_m=(2m)!/m!`$ | [`check_Eq4_16.sage`](program/check_Eq4_16.sage) | [`.txt`](output/check_Eq4_16.txt) |
 | Identity (4.17) | $`a_m=\binom{2m+1}{m}`$ | [`check_Eq4_17.sage`](program/check_Eq4_17.sage) | [`.txt`](output/check_Eq4_17.txt) |
 
-### Section 5 — the Gaussian family (`d03invo.tex`)
+### Section 5 — the Gaussian family
 
 Here $`c`$ is kept symbolic, so every check is a polynomial identity in $`c`$. The
 two lemmas are moment identities of the Gaussian functional $`\mathcal L`$, indexed
@@ -72,7 +77,7 @@ by a pair; `N` bounds both indices.
 | Lemma 5.3 (mixed Hermite moments) | $`\mathcal L[\mathrm{He}_p(c+z)\mathrm{He}_q(z)]=q!\binom{p}{q}c^{p-q}`$ | [`check_Lem5_3.sage`](program/check_Lem5_3.sage) | [`.txt`](output/check_Lem5_3.txt) |
 | Lemma 5.4 (triangularising family) | $`\mathcal L[\Phi_i(z)\mathrm{He}_j(z)]=j!\binom{i}{j-i}(2c)^{2i-j}`$ | [`check_Lem5_4.sage`](program/check_Lem5_4.sage) | [`.txt`](output/check_Lem5_4.txt) |
 
-### Section 6 — the single shift of the Gaussian family (`d03invo.tex`)
+### Section 6 — the single shift of the Gaussian family
 
 The single shift is the dilated Hankel determinant of $`f'`$, i.e.
 $`\det(a_{2i+j+1})`$. Again $`c`$ is symbolic; identity (6.1) is a moment
@@ -84,7 +89,7 @@ claims).
 | Theorem 6.1 (single shift) | $`\ddot{H}_n(f')=c^n(2c)^{\binom n2}\prod_{k<n}k!`$ | [`check_Thm6_1.sage`](program/check_Thm6_1.sage) | [`.txt`](output/check_Thm6_1.txt) |
 | Identity (6.1) | $`\mathcal L[\Psi_i\,u\,\mathrm{He}_j]=0\ (j<i),\ c\,i!\,(2c)^i\ (j=i)`$ | [`check_Eq6_1.sage`](program/check_Eq6_1.sage) | [`.txt`](output/check_Eq6_1.txt) |
 
-### Section 7 — the Euler number family (`d04euler.tex`)
+### Section 7 — the Euler number family
 
 | Statement | Program | Output |
 |---|---|---|
@@ -94,7 +99,7 @@ claims).
 | Lemma 7.4 (`lem:bindetSigma`) | [`check_Lem7_4.sage`](program/check_Lem7_4.sage) | [`.txt`](output/check_Lem7_4.txt) |
 | Lemma 7.5 (`lem:Pahalf`) | [`check_Lem7_5.sage`](program/check_Lem7_5.sage) | [`.txt`](output/check_Lem7_5.txt) |
 
-### Section 8 — the double shift of the Euler number family (`d04euler.tex`)
+### Section 8 — the double shift of the Euler number family
 
 The double shift is $`\ddot H_n^{(2)}=\det(a_{2i+j+2})`$ of the Euler $`(s,t)`$
 family, whose sequence $`a`$ (with $`a_{2k}=E^{(s+1)}_{2k}`$, $`a_{2k+1}=E^{(t+1)}_{2k}`$)
@@ -107,7 +112,7 @@ top; keep $`(t-s)/2`$ away from the non-negative integers or the family degenera
 |---|---|---|---|
 | Proposition 8.4 (double shift, special family) | $`\ddot H_n^{(2)}=(2n-1)!!\prod_{k=0}^{\bar n-1}(s+2k+1)\prod_{k=0}^{\underline n-1}(t+2k+1)\,\ddot H_n`$ | [`check_Prop8_4.sage`](program/check_Prop8_4.sage) | [`.txt`](output/check_Prop8_4.txt) |
 
-### Section 9 — the single shift of the Euler number family on the line `t=1` (`d05eulershift.tex`)
+### Section 9 — the single shift of the Euler number family on the line `t=1`
 
 | Statement | Program | Output |
 |---|---|---|
@@ -116,7 +121,7 @@ top; keep $`(t-s)/2`$ away from the non-negative integers or the family degenera
 | equation (`9.3`) (`eq:shiftmonic`) | [`check_Eq9_3.sage`](program/check_Eq9_3.sage) | [`.txt`](output/check_Eq9_3.txt) |
 | equation (`9.4`) (`eq:shiftconst`) | [`check_Eq9_4.sage`](program/check_Eq9_4.sage) | [`.txt`](output/check_Eq9_4.txt) |
 
-### Section 10 — the single shift of the Euler family on the line $`t=3`$ (`d05eulershift.tex`)
+### Section 10 — the single shift of the Euler family on the line $`t=3`$
 
 Here $`t=3`$ and $`s`$ is symbolic. The single shift is
 $`\ddot H_n^{(1)}=\det(a_{2i+j+1})`$, built from the moments of the Stieltjes
@@ -139,7 +144,7 @@ divergence/rank statements are checked at the relevant $`s=-(2k+1)`$.
 | Lemma 10.10 (trace identity) | $`\mathrm{tr}(\bar M^{-1}D_a\bar M D_m)=\sum_r a_r(\bar n+r)-\bar n a_0\underline n`$ | [`check_Lem10_10.sage`](program/check_Lem10_10.sage) | [`.txt`](output/check_Lem10_10.txt) |
 | Lemma 10.11 (contiguous relation) | $`a_{2k}(s)=\tfrac{a_{2k+2}(s-2)+(s-1)^2a_{2k}(s-2)}{s(s-1)}`$; $`(s(s-1))^{\underline n}\ddot H_n^{(1)}(s)=\sum_q(s-1)^{2q}G_q(s-2)`$ | [`check_Lem10_11.sage`](program/check_Lem10_11.sage) | [`.txt`](output/check_Lem10_11.txt) |
 
-### Section 11 — the secant-number family `(1+x)/cos^{s+1}x`, case `s=0` (`d06xcos.tex`)
+### Section 11 — the secant-number family `(1+x)/cos^{s+1}x`, case `s=0`
 
 | Statement | Program | Output |
 |---|---|---|
@@ -147,7 +152,7 @@ divergence/rank statements are checked at the relevant $`s=-(2k+1)`$.
 | Lemma 11.2 (`lem:cdh`) | [`check_Lem11_2.sage`](program/check_Lem11_2.sage) | [`.txt`](output/check_Lem11_2.txt) |
 | Lemma 11.4 (`lem:conn3`) | [`check_Lem11_4.sage`](program/check_Lem11_4.sage) | [`.txt`](output/check_Lem11_4.txt) |
 
-### Section 12 — the secant-number family `(1+x)/cos^{s+1}x`, general `s` (`d06xcos.tex`)
+### Section 12 — the secant-number family `(1+x)/cos^{s+1}x`, general `s`
 
 | Statement | Program | Output |
 |---|---|---|
@@ -156,7 +161,7 @@ divergence/rank statements are checked at the relevant $`s=-(2k+1)`$.
 | Lemma 12.3 (`lem:rankdrop`) | [`check_Lem12_3.sage`](program/check_Lem12_3.sage) | [`.txt`](output/check_Lem12_3.txt) |
 | Lemma 12.4 (`lem:deriv`) | [`check_Lem12_4.sage`](program/check_Lem12_4.sage) | [`.txt`](output/check_Lem12_4.txt) |
 
-### Section 13 — the single shift of the secant-number family (`d07xcosshift.tex`)
+### Section 13 — the single shift of the secant-number family
 
 | Statement | Program | Output |
 |---|---|---|
@@ -168,7 +173,7 @@ divergence/rank statements are checked at the relevant $`s=-(2k+1)`$.
 | Proposition 13.7 (`prop:const`) | [`check_Prop13_7.sage`](program/check_Prop13_7.sage) | [`.txt`](output/check_Prop13_7.txt) |
 | Lemma 13.8 (`lem:samekappa`) | [`check_Lem13_8.sage`](program/check_Lem13_8.sage) | [`.txt`](output/check_Lem13_8.txt) |
 
-### Section 14 — the double shift of the secant-number family at `s=1` (`d08xcosds.tex`)
+### Section 14 — the double shift of the secant-number family at `s=1`
 
 | Statement | Program | Output |
 |---|---|---|
@@ -178,7 +183,7 @@ divergence/rank statements are checked at the relevant $`s=-(2k+1)`$.
 | Lemma 14.4 (`lem:ds-Delta`) | [`check_Lem14_4.sage`](program/check_Lem14_4.sage) | [`.txt`](output/check_Lem14_4.txt) |
 | Lemma 14.5 (`lem:ds-cauchy`) | [`check_Lem14_5.sage`](program/check_Lem14_5.sage) | [`.txt`](output/check_Lem14_5.txt) |
 
-### Section 15 — a rank-one perturbation of the Euler number family (`d10runkone.tex`)
+### Section 15 — a rank-one perturbation of the Euler number family
 
 | Statement | Program | Output |
 |---|---|---|
@@ -188,7 +193,7 @@ divergence/rank statements are checked at the relevant $`s=-(2k+1)`$.
 | Lemma 15.4 (`lem:evalminus1`) | [`check_Lem15_4.sage`](program/check_Lem15_4.sage) | [`.txt`](output/check_Lem15_4.txt) |
 | Lemma 15.5 (`lem:sin3sys`) | [`check_Lem15_5.sage`](program/check_Lem15_5.sage) | [`.txt`](output/check_Lem15_5.txt) |
 
-### Section 16 — the Springer number family (`d11springer.tex`)
+### Section 16 — the Springer number family
 
 The Springer family is $`1/(\cos x-t\sin x)^r`$; its moments are
 $`a_n(t)=n!\,[x^n](\cos x-t\sin x)^{-r}`$. The exponent $`r\ge1`$ is a parameter
@@ -200,7 +205,7 @@ the LHS is printed factored, exhibiting the $`(t(t^2+1))^{\binom n2}`$ divisor.
 |---|---|---|---|
 | Theorem 16.1 (Springer family) | $`\ddot H_n\!\big(\tfrac{1}{(\cos x-t\sin x)^r}\big)=(t(t^2+1))^{\binom n2}\,\ddot H_n\!\big(\tfrac{1}{(1-x)^r}\big)`$ | [`check_Thm16_1.sage`](program/check_Thm16_1.sage) | [`.txt`](output/check_Thm16_1.txt) |
 
-### Section 17 — a derivative of the Springer number family at `t=1` (`d11springer.tex`)
+### Section 17 — a derivative of the Springer number family at `t=1`
 
 | Statement | Program | Output |
 |---|---|---|
@@ -208,7 +213,7 @@ the LHS is printed factored, exhibiting the $`(t(t^2+1))^{\binom n2}`$ divisor.
 | Lemma 17.2 (`lem:Apoly`) | [`check_Lem17_2.sage`](program/check_Lem17_2.sage) | [`.txt`](output/check_Lem17_2.txt) |
 | Lemma 17.3 (`lem:gausskernel`) | [`check_Lem17_3.sage`](program/check_Lem17_3.sage) | [`.txt`](output/check_Lem17_3.txt) |
 
-### Section 18 — the reciprocal-sine case $`(1+x)\,x/\sin x`$ (`d12xsinx.tex`)
+### Section 18 — the reciprocal-sine case $`(1+x)\,x/\sin x`$
 
 With $`g=x/\sin x`$, $`b_k=(2k)![x^{2k}]g`$, the moments are $`a_{2k}=b_k`$,
 $`a_{2k+1}=(2k+1)b_k`$. The proof runs through the connection coefficients
@@ -222,32 +227,32 @@ All checks use exact rational arithmetic.
 | Lemma 18.7 (Catalan splitting) | $`\kappa_{i,m}=\alpha_i\beta_m C_{i-m-1}C_{i+m}`$ (for $`i>m`$) | [`check_Lem18_7.sage`](program/check_Lem18_7.sage) | [`.txt`](output/check_Lem18_7.txt) |
 | Theorem 18.8 (Catalan determinant) | $`F_N(a,b)=\det(C_{a+r-m}C_{b+r+m})`$ equals the staircase product (eq:xsin-catalan), for $`a\ge N-1,\ b\ge a+1`$ | [`check_Thm18_8.sage`](program/check_Thm18_8.sage) | [`.txt`](output/check_Thm18_8.txt) |
 
-### Section 19 — an elliptic deformation of the Euler numbers (`d15elliptic.tex`)
+### Section 19 — an elliptic deformation of the Euler numbers
 
 | Statement | Program | Output |
 |---|---|---|
 | Theorem 19.1 (`thm:ell`) | [`check_Thm19_1.sage`](program/check_Thm19_1.sage) | [`.txt`](output/check_Thm19_1.txt) |
 
-### Section 20 — an algebraic family `(1+x)/(1-x^2)^{s/2}` (`d18alge.tex`)
+### Section 20 — an algebraic family `(1+x)/(1-x^2)^{s/2}`
 
 | Statement | Program | Output |
 |---|---|---|
 | Theorem 20.1 (`conj:alg`) | [`check_Thm20_1.sage`](program/check_Thm20_1.sage) | [`.txt`](output/check_Thm20_1.txt) |
 
-### Section 21 — the squared algebraic family `(1+x)^2/(1-x^2)^{s/2}` (`d19algesq.tex`)
+### Section 21 — the squared algebraic family `(1+x)^2/(1-x^2)^{s/2}`
 
 | Statement | Program | Output |
 |---|---|---|
 | Theorem 21.1 (`conj:algsq`) | [`check_Thm21_1.sage`](program/check_Thm21_1.sage) | [`.txt`](output/check_Thm21_1.txt) |
 
-### Section 22 — shifted determinants of the two algebraic families (`d19algesq.tex`)
+### Section 22 — shifted determinants of the two algebraic families
 
 | Statement | Program | Output |
 |---|---|---|
 | Proposition 22.1 (`prop:algshift`) | [`check_Prop22_1.sage`](program/check_Prop22_1.sage) | [`.txt`](output/check_Prop22_1.txt) |
 | Theorem 22.3 (`thm:algsqshift`) | [`check_Thm22_3.sage`](program/check_Thm22_3.sage) | [`.txt`](output/check_Thm22_3.txt) |
 
-### Section 23 — a Bessel analogue of the Euler number family (`d24Bessel.tex`)
+### Section 23 — a Bessel analogue of the Euler number family
 
 | Statement | Program | Output |
 |---|---|---|
@@ -256,13 +261,13 @@ All checks use exact rational arithmetic.
 | Lemma 23.6 (`lem:bessel-kappa`) | [`check_Lem23_6.sage`](program/check_Lem23_6.sage) | [`.txt`](output/check_Lem23_6.txt) |
 | Theorem 23.7 (`thm:bessel-det`) | [`check_Thm23_7.sage`](program/check_Thm23_7.sage) | [`.txt`](output/check_Thm23_7.txt) |
 
-### Section 24 — the double shift of the Bessel `(s,t)` family (`d24Bessel.tex`)
+### Section 24 — the double shift of the Bessel `(s,t)` family
 
 | Statement | Program | Output |
 |---|---|---|
 | Proposition 24.2 (`prop:besseldshift`) | [`check_Prop24_2.sage`](program/check_Prop24_2.sage) | [`.txt`](output/check_Prop24_2.txt) |
 
-### Section 25 — a multiplicative Bessel family `(1+x)cosb_v^2` at even orders (`d25xBessel.tex`)
+### Section 25 — a multiplicative Bessel family `(1+x)cosb_v^2` at even orders
 
 | Statement | Program | Output |
 |---|---|---|
@@ -272,7 +277,7 @@ All checks use exact rational arithmetic.
 | Theorem 25.4 (`thm:xbesseleven`) | [`check_Thm25_4.sage`](program/check_Thm25_4.sage) | [`.txt`](output/check_Thm25_4.txt) |
 | Corollary 25.6 (`cor:xbe-sinc`) | [`check_Coro25_6.sage`](program/check_Coro25_6.sage) | [`.txt`](output/check_Coro25_6.txt) |
 
-### Section 26 — connection with a determinant of Chapoton--Han (`d50chapoton.tex`)
+### Section 26 — connection with a determinant of Chapoton--Han
 
 | Statement | Program | Output |
 |---|---|---|
@@ -282,11 +287,11 @@ All checks use exact rational arithmetic.
 | Lemma 26.5 (`lem:rhomom`) | [`check_Lem26_5.sage`](program/check_Lem26_5.sage) | [`.txt`](output/check_Lem26_5.txt) |
 | Link between Chapoton–Han matrix and dilated matrix | [`r1root.sage`](program/r1root.sage) | [`.txt`](output/r1root.txt) |
 
-### Section 27 — Corollaries: explicit evaluations (`d51coro.tex`)
+### Section 27 — Corollaries: explicit evaluations
 
 The compendium of explicit members. Each checker computes the sequence from its generating function (or the stated closed form of its moments), forms `det(a_{2i+j})` (and the single/double shifts where the corollary records them), and compares to the stated product; all use exact arithmetic. (The reciprocal-sine subsection has no corollary of its own — see Section 18.)
 
-**The Beta family (`d02beta.tex`, via Cor 4.3 / Prop 4.2).**
+**The Beta family (via Cor 4.3 / Prop 4.2).**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
@@ -297,14 +302,14 @@ The compendium of explicit members. Each checker computes the sequence from its 
 | 27.5 | double factorials $`(2m\pm1)!!`$ | [`check_Coro27_5.sage`](program/check_Coro27_5.sage) | [`.txt`](output/check_Coro27_5.txt) |
 | 27.6 | $`(2m)!/m!`$ | [`check_Coro27_6.sage`](program/check_Coro27_6.sage) | [`.txt`](output/check_Coro27_6.txt) |
 
-**The Gaussian family (`d03invo.tex`).**
+**The Gaussian family.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
 | 27.7 | $`c=1`$ (involution numbers) | [`check_Coro27_7.sage`](program/check_Coro27_7.sage) | [`.txt`](output/check_Coro27_7.txt) |
 | 27.8 | $`c=-1`$ (signed involutions) | [`check_Coro27_8.sage`](program/check_Coro27_8.sage) | [`.txt`](output/check_Coro27_8.txt) |
 
-**The Euler number family (`d04euler.tex`), by $`(s,t)`$.**
+**The Euler number family, by $`(s,t)`$.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
@@ -317,7 +322,7 @@ The compendium of explicit members. Each checker computes the sequence from its 
 | 27.15 | $`(0,3)`$ | [`check_Coro27_15.sage`](program/check_Coro27_15.sage) | [`.txt`](output/check_Coro27_15.txt) |
 | 27.16 | $`(3,0)`$ | [`check_Coro27_16.sage`](program/check_Coro27_16.sage) | [`.txt`](output/check_Coro27_16.txt) |
 
-**The secant family $`(1+x)/\cos^{s+1}x`$ (`d06xcos.tex`).**
+**The secant family $`(1+x)/\cos^{s+1}x`$.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
@@ -326,7 +331,7 @@ The compendium of explicit members. Each checker computes the sequence from its 
 | 27.19 | $`s=2`$ | [`check_Coro27_19.sage`](program/check_Coro27_19.sage) | [`.txt`](output/check_Coro27_19.txt) |
 | 27.20 | $`s=3`$ | [`check_Coro27_20.sage`](program/check_Coro27_20.sage) | [`.txt`](output/check_Coro27_20.txt) |
 
-**Rank-one perturbation $`(\sin x+1)/\cos^2x+s\sin x`$ (`d10runkone.tex`).**
+**Rank-one perturbation $`(\sin x+1)/\cos^2x+s\sin x`$.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
@@ -336,14 +341,14 @@ The compendium of explicit members. Each checker computes the sequence from its 
 | 27.24 | $`s=1`$ | [`check_Coro27_24.sage`](program/check_Coro27_24.sage) | [`.txt`](output/check_Coro27_24.txt) |
 | 27.25 | $`s=2`$ | [`check_Coro27_25.sage`](program/check_Coro27_25.sage) | [`.txt`](output/check_Coro27_25.txt) |
 
-**The Springer number family $`1/(\cos x-t\sin x)^r`$ (`d11springer.tex`).**
+**The Springer number family $`1/(\cos x-t\sin x)^r`$.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
 | 27.26 | $`t=1,r=1`$ Springer numbers | [`check_Coro27_26.sage`](program/check_Coro27_26.sage) | [`.txt`](output/check_Coro27_26.txt) |
 | 27.27 | $`t=1,r=2`$ | [`check_Coro27_27.sage`](program/check_Coro27_27.sage) | [`.txt`](output/check_Coro27_27.txt) |
 
-**Derivative of the Springer family $`(\cos x+\sin x)/(\cos x-\sin x)^s`$ (`d11springer.tex`).**
+**Derivative of the Springer family $`(\cos x+\sin x)/(\cos x-\sin x)^s`$.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
@@ -351,7 +356,7 @@ The compendium of explicit members. Each checker computes the sequence from its 
 | 27.29 | $`s=2`$ | [`check_Coro27_29.sage`](program/check_Coro27_29.sage) | [`.txt`](output/check_Coro27_29.txt) |
 | 27.30 | $`s=3`$ | [`check_Coro27_30.sage`](program/check_Coro27_30.sage) | [`.txt`](output/check_Coro27_30.txt) |
 
-**Elliptic deformation $`(1+\mathrm{sn})/\mathrm{cn}`$ (`d15elliptic.tex`).**
+**Elliptic deformation $`(1+\mathrm{sn})/\mathrm{cn}`$.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
@@ -359,7 +364,7 @@ The compendium of explicit members. Each checker computes the sequence from its 
 | 27.32 | $`m=2`$ | [`check_Coro27_32.sage`](program/check_Coro27_32.sage) | [`.txt`](output/check_Coro27_32.txt) |
 | 27.33 | $`m=1/2`$ | [`check_Coro27_33.sage`](program/check_Coro27_33.sage) | [`.txt`](output/check_Coro27_33.txt) |
 
-**Algebraic family $`(1+x)/(1-x^2)^{s/2}`$ (`d18alge.tex`).**
+**Algebraic family $`(1+x)/(1-x^2)^{s/2}`$.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
@@ -369,21 +374,21 @@ The compendium of explicit members. Each checker computes the sequence from its 
 | 27.37 | $`s=2`$ | [`check_Coro27_37.sage`](program/check_Coro27_37.sage) | [`.txt`](output/check_Coro27_37.txt) |
 | 27.38 | $`s=3`$ | [`check_Coro27_38.sage`](program/check_Coro27_38.sage) | [`.txt`](output/check_Coro27_38.txt) |
 
-**Squared-algebraic family $`(1+x)^2/(1-x^2)^{s/2}`$ (`d19algesq.tex`).**
+**Squared-algebraic family $`(1+x)^2/(1-x^2)^{s/2}`$.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
 | 27.39 | $`s=2`$ | [`check_Coro27_39.sage`](program/check_Coro27_39.sage) | [`.txt`](output/check_Coro27_39.txt) |
 | 27.40 | $`s=4`$ | [`check_Coro27_40.sage`](program/check_Coro27_40.sage) | [`.txt`](output/check_Coro27_40.txt) |
 
-**The Bessel $`(s,t)`$ family (`d24Bessel.tex`).**
+**The Bessel $`(s,t)`$ family.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
 | 27.41 | $`(0,1/2)`$, $`J_0+\mathrm{Si}`$ | [`check_Coro27_41.sage`](program/check_Coro27_41.sage) | [`.txt`](output/check_Coro27_41.txt) |
 | 27.42 | $`(1/2,0)`$ | [`check_Coro27_42.sage`](program/check_Coro27_42.sage) | [`.txt`](output/check_Coro27_42.txt) |
 
-**Multiplicative Bessel family $`(1+x)\,\mathrm{cosb}_\nu^2`$ (`d25xBessel.tex`), even orders.**
+**Multiplicative Bessel family $`(1+x)\,\mathrm{cosb}_\nu^2`$, even orders.**
 
 | Corollary | Member | Program | Output |
 |---|---|---|---|
@@ -391,7 +396,7 @@ The compendium of explicit members. Each checker computes the sequence from its 
 | 27.44 | $`\nu=1/2`$ | [`check_Coro27_44.sage`](program/check_Coro27_44.sage) | [`.txt`](output/check_Coro27_44.txt) |
 | 27.45 | $`\nu=1`$ | [`check_Coro27_45.sage`](program/check_Coro27_45.sage) | [`.txt`](output/check_Coro27_45.txt) |
 
-### Section 29 — classical Hankel determinants (`d57hankel.tex`)
+### Section 29 — classical Hankel determinants
 
 | Statement | Program | Output |
 |---|---|---|
