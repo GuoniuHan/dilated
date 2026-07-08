@@ -10,14 +10,14 @@ be done.
 
 ## Abstract
 
-For a sequence $\mathbf{a}=(a_0,a_1,\dots)$ we define its *dilated Hankel determinant*
-$\ddot{H}_n(\mathbf{a})=\det(a_{2i+j})_{0\le i,j\le n-1}$, the minor
-of the infinite Hankel matrix $(a_{i+j})$ formed from the even-indexed rows and
-the first $n$ columns. We prove that, for a broad class of sequences,
-$\ddot{H}_n$ admits a remarkably simple product evaluation. This mirrors the
-behaviour of the classical Hankel determinant $H_n$, but with two key
+For a sequence $`\mathbf{a}=(a_0,a_1,\dots)`$ we define its *dilated Hankel determinant*
+$`\ddot{H}_n(\mathbf{a})=\det(a_{2i+j})_{0\le i,j\le n-1}`$, the minor
+of the infinite Hankel matrix $`(a_{i+j})`$ formed from the even-indexed rows and
+the first $`n`$ columns. We prove that, for a broad class of sequences,
+$`\ddot{H}_n`$ admits a remarkably simple product evaluation. This mirrors the
+behaviour of the classical Hankel determinant $`H_n`$, but with two key
 distinctions: the class of sequences for which such formulas are known is far
-larger in the classical case; and, whereas $H_n$ enjoys a single universal
+larger in the classical case; and, whereas $`H_n`$ enjoys a single universal
 evaluation — the Heilermann formula via the Jacobi continued fraction — no
 analogous general method exists for the dilated determinant, which is therefore
 considerably more challenging. Our evaluations instead rest on six reduction
