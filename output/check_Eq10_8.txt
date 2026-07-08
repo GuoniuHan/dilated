@@ -1,0 +1,16 @@
+Identity (10.8) (eq:t3CV) of d05eulershift.tex   [t=3]
+
+Part A -- R(k,X,m) = sum_j C(k+X,j) G_j(m)   over 0<=k<=5, m<=10, u=X-m in 0..10
+  checked 726 triples (k,X,m); mismatches: 0
+
+Part B -- N_{r,m}|_{s=-(2k+1)} = (-1)^u R(r,m)  on the matrix N (per n,k)
+  n |  k  | max |N - (-1)^u R| over r,m
+----+-----+-----------------------------
+  2 |   0 | 0
+  3 |   0 | 0
+  4 |   0 | 0
+  4 |   1 | 0
+  5 |   0 | 0
+  5 |   1 | 0
+
+Resume: all dif = 0. Identity checked.

@@ -1,0 +1,9 @@
+Corollary 27.18 (cor:xc1): secant s=1, f=(1+x)/cos^2 x
+
+n=1:  HH_n=1 (dif 0)   HH_n^(1)=1 (dif 0)   HH_n^(2)=2 (dif 0)
+n=2:  HH_n=4 (dif 0)   HH_n^(1)=4 (dif 0)   HH_n^(2)=64 (dif 0)
+n=3:  HH_n=192 (dif 0)   HH_n^(1)=768 (dif 0)   HH_n^(2)=55296 (dif 0)
+n=4:  HH_n=884736 (dif 0)   HH_n^(1)=7962624 (dif 0)   HH_n^(2)=8153726976 (dif 0)
+n=5:  HH_n=366917713920 (dif 0)   HH_n^(1)=23482733690880 (dif 0)   HH_n^(2)=169075682574336000 (dif 0)
+
+Resume: all dif = 0. Formula checked.

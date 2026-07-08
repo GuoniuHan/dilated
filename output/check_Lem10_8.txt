@@ -1,0 +1,13 @@
+Lemma 10.8 (lem:t3rank) of d05eulershift.tex   [t=3]
+
+  n |  k  | rank N at s=-(2k+1) | <= k+1 ? | (s+2k+1)^(nund-1-k) | div detN ?
+----+-----+---------------------+----------+---------------------+-----------
+  1 | (nund=0: N is empty; nothing to check)
+  2 |   0 |                   1 |      yes |                   0 | yes
+  3 |   0 |                   1 |      yes |                   0 | yes
+  4 |   0 |                   1 |      yes |                   1 | yes
+  4 |   1 |                   2 |      yes |                   0 | yes
+  5 |   0 |                   1 |      yes |                   1 | yes
+  5 |   1 |                   2 |      yes |                   0 | yes
+
+Resume: all rank/divisibility checks pass for n = 1..5. Lemma checked.

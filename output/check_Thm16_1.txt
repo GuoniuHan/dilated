@@ -1,0 +1,25 @@
+Theorem 16.1 (thm:springer) of d11springer.tex   [t symbolic]
+parameter: r = 1
+LHS(n) = HH_n(1/(cos x - t sin x)^r) shown factored; RHS = (t(t^2+1))^C(n,2)*HH_n(1/(1-x)^r).
+
+n=1:  HH_n(1/(1-x)^r) = 1
+      LHS = 1
+      dif = 0
+
+n=2:  HH_n(1/(1-x)^r) = 4
+      LHS = (4) * t * (t^2 + 1)
+      dif = 0
+
+n=3:  HH_n(1/(1-x)^r) = 768
+      LHS = (768) * t^3 * (t^2 + 1)^3
+      dif = 0
+
+n=4:  HH_n(1/(1-x)^r) = 26542080
+      LHS = (26542080) * t^6 * (t^2 + 1)^6
+      dif = 0
+
+n=5:  HH_n(1/(1-x)^r) = 410947839590400
+      LHS = (410947839590400) * t^10 * (t^2 + 1)^10
+      dif = 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

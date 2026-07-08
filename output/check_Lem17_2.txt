@@ -1,0 +1,23 @@
+Lemma 17.2 (lem:Apoly) of d11springer.tex   [exact over QQ]
+
+(i) a_k(s) is monic of degree k
+  k | deg_s a_k | leading coeff | status
+----+-----------+---------------+-------
+  0 |         0 |             1 | OK
+  1 |         1 |             1 | OK
+  2 |         2 |             1 | OK
+  3 |         3 |             1 | OK
+  4 |         4 |             1 | OK
+  5 |         5 |             1 | OK
+
+(ii) pi_r(k) = [s^{k-r}] a_k(s) is poly in k, deg <= 2r, [k^{2r}] = 1/r!
+  r | deg_k pi_r | bound 2r | [k^{2r}]pi_r |   1/r!   | status
+----+------------+----------+--------------+----------+-------
+  0 |          0 |        0 |            1 |        1 | OK
+  1 |          2 |        2 |            1 |        1 | OK
+  2 |          4 |        4 |          1/2 |      1/2 | OK
+  3 |          6 |        6 |          1/6 |      1/6 | OK
+  4 |          8 |        8 |         1/24 |     1/24 | OK
+  5 |         10 |       10 |        1/120 |    1/120 | OK
+
+Resume: all checks pass for indices <= 5. Formula checked.

@@ -1,0 +1,9 @@
+Corollary 27.17 (cor:xc0): secant s=0, f=(1+x)/cos x
+
+n=1:  HH_n=1 (dif 0)   HH_n^(1)=1 (dif 0)
+n=2:  HH_n=2 (dif 0)   HH_n^(1)=2 (dif 0)
+n=3:  HH_n=32 (dif 0)   HH_n^(1)=128 (dif 0)
+n=4:  HH_n=36864 (dif 0)   HH_n^(1)=331776 (dif 0)
+n=5:  HH_n=3057647616 (dif 0)   HH_n^(1)=195689447424 (dif 0)
+
+Resume: all dif = 0. Formula checked.

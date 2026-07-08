@@ -1,0 +1,12 @@
+Lemma 25.1 (lem:xbe-moments) of d25xBessel.tex   [exact, nu over QQ(nu)]
+
+  k | dif a_{2k} (def vs closed) | dif a_{2k+1} (=(2k+1)a_{2k} vs closed)
+----+----------------------------+---------------------------------------
+  0 |                          0 | 0
+  1 |                          0 | 0
+  2 |                          0 | 0
+  3 |                          0 | 0
+  4 |                          0 | 0
+  5 |                          0 | 0
+
+Resume: all dif = 0 for k = 0..5. Formula checked.

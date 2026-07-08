@@ -1,0 +1,9 @@
+Corollary 27.8 (cor:gm1): Gaussian c=-1 (signed involution numbers)
+
+n=1:  HH_n=1 (dif 0)   HH_n(f')=-1 (dif 0)
+n=2:  HH_n=-2 (dif 0)   HH_n(f')=-2 (dif 0)
+n=3:  HH_n=-16 (dif 0)   HH_n(f')=16 (dif 0)
+n=4:  HH_n=768 (dif 0)   HH_n(f')=768 (dif 0)
+n=5:  HH_n=294912 (dif 0)   HH_n(f')=-294912 (dif 0)
+
+Resume: all dif = 0. Formula checked.

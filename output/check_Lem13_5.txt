@@ -1,0 +1,32 @@
+Lemma 13.5 (lem:percol) of d07xcosshift.tex   [s kept symbolic]
+
+(i) degree bound: deg_s T*[Ph_a y^l] <= 2l   (0 <= l < a)
+(a,l) | deg_s | bound 2l | status
+------+-------+----------+-------
+(1,0) |     0 |        0 | OK
+(2,0) |     0 |        0 | OK
+(2,1) |     2 |        2 | OK
+(3,0) |     0 |        0 | OK
+(3,1) |     2 |        2 | OK
+(3,2) |     4 |        4 | OK
+(4,0) |     0 |        0 | OK
+(4,1) |     2 |        2 | OK
+(4,2) |     4 |        4 | OK
+(4,3) |     6 |        6 | OK
+(5,0) |     0 |        0 | OK
+(5,1) |     2 |        2 | OK
+(5,2) |     4 |        4 | OK
+(5,3) |     6 |        6 | OK
+(5,4) |     8 |        8 | OK
+
+(ii) exact value: T*[Ph_a] = (-1)^a (2a)!
+  a |            LHS            |            RHS            |  dif
+----+--------------------------+--------------------------+-----
+  0 |                        1 |                        1 | 0
+  1 |                       -2 |                       -2 | 0
+  2 |                       24 |                       24 | 0
+  3 |                     -720 |                     -720 | 0
+  4 |                    40320 |                    40320 | 0
+  5 |                 -3628800 |                 -3628800 | 0
+
+Resume: all bounds hold and all dif = 0 for indices <= 5. Formula checked.

@@ -1,0 +1,9 @@
+Corollary 27.19 (cor:xc2): secant s=2, f=(1+x)/cos^3 x
+
+n=1:  HH_n=1 (dif 0)   HH_n^(1)=1 (dif 0)
+n=2:  HH_n=6 (dif 0)   HH_n^(1)=6 (dif 0)
+n=3:  HH_n=576 (dif 0)   HH_n^(1)=2304 (dif 0)
+n=4:  HH_n=6635520 (dif 0)   HH_n^(1)=59719680 (dif 0)
+n=5:  HH_n=8255648563200 (dif 0)   HH_n^(1)=528361508044800 (dif 0)
+
+Resume: all dif = 0. Formula checked.

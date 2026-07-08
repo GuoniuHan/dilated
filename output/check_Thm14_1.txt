@@ -1,0 +1,12 @@
+Theorem 14.1 (thm:dblshift) of d08xcosds.tex   [double shift, s=1]
+HH_n^{(2)} vs  2^n(n!)^2 HH_n  vs  closed product  vs  2^n(n!!)^2 HH_n^{(1)}
+
+  n |          HH_n^{(2)}|_{s=1}           | difA | difB | difC
+----+--------------------------------------+------+------+-----
+  1 |                                    2 |    0 |    0 | 0
+  2 |                                   64 |    0 |    0 | 0
+  3 |                                55296 |    0 |    0 | 0
+  4 |                           8153726976 |    0 |    0 | 0
+  5 |                   169075682574336000 |    0 |    0 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

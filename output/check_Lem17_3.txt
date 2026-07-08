@@ -1,0 +1,12 @@
+Lemma 17.3 (lem:gausskernel) of d11springer.tex   [exact power series over QQ]
+det(e^{sig (2i+j)^2}) = 4^C(n,2) (prod_{k<n} k!) sig^C(n,2) + O(sig^{C(n,2)+1})
+
+  n | val | C(n,2) | leading coeff | 4^C(n,2) prod k! |  dif
+----+-----+--------+---------------+------------------+-----
+  1 |   0 |      0 |             1 |                1 | 0
+  2 |   1 |      1 |             4 |                4 | 0
+  3 |   3 |      3 |           128 |              128 | 0
+  4 |   6 |      6 |         49152 |            49152 | 0
+  5 |  10 |     10 |     301989888 |        301989888 | 0
+
+Resume: valuation = C(n,2) and leading coeff matches for n = 1..5. Formula checked.

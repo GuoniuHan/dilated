@@ -1,0 +1,24 @@
+Theorem 21.1 (conj:algsq) of d19algesq.tex   [s kept symbolic]
+
+(A) b_m from the EGF vs the mu-formulas  b_{2k}=mu_k+2k(2k-1)mu_{k-1}, b_{2k+1}=2(2k+1)mu_k
+  k | dif b_{2k} | dif b_{2k+1}
+----+------------+-------------
+  0 |          0 | 0
+  1 |          0 | 0
+  2 |          0 | 0
+  3 |          0 | 0
+  4 |          0 | 0
+  5 |          0 | 0
+  6 |          0 | 0
+  7 |          0 | 0
+
+(B) HH_n(f) = det(b_{2i+j}) vs the closed form (denominator (s-3) cleared)
+  n | deg last factor | (s-3)-remainder | dif = LHS-RHS
+----+-----------------+-----------------+--------------
+  1 |               0 |               0 | 0
+  2 |               1 |               0 | 0
+  3 |               2 |               0 | 0
+  4 |               3 |               0 | 0
+  5 |               4 |               0 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

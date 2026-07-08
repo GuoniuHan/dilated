@@ -1,0 +1,13 @@
+Lemma 9.2 (lem:mixedconn) of d05eulershift.tex   [s kept symbolic, t=1]
+Q_i = sum_m kappa~_{i,m} P'_m,  kappa~_{i,m} = (2i+1)!/(2m+1)! C((s+1)/2, i-m).
+
+  i | deg Q_i |          dif(i) = Q_i - sum kappa~ P'_m
+----+---------+-----------------------------------------
+  0 |       0 | 0
+  1 |       1 | 0
+  2 |       2 | 0
+  3 |       3 | 0
+  4 |       4 | 0
+  5 |       5 | 0
+
+Resume: all dif = 0 for i = 0..5. Formula checked.

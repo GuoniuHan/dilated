@@ -1,0 +1,12 @@
+Equation (9.4) (eq:shiftconst) of d05eulershift.tex   [t=1]
+Ktilde_n from formula vs first values vs det|_{s=0}/poch|_{s=0}.
+
+  n |        Ktilde_n (formula)        | dif(vals) | dif(det) | dif(1/2poch)
+----+----------------------------------+-----------+----------+-------------
+  1 |                                1 |         0 |        0 | 0
+  2 |                               12 |         0 |        0 | 0
+  3 |                             1440 |         0 |        0 | 0
+  4 |                          9676800 |         0 |        0 | 0
+  5 |                    7023034368000 |         0 |        0 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

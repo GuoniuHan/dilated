@@ -1,0 +1,12 @@
+Theorem 26.1 (thm:rootlink) of d50chapoton.tex   [exact over QQ]
+det M_N = 2^{-C(N,2)} HH_N((1+x)/cos x) = ((N-1)!!)^2 prod (k!!)^6 = CH-product
+
+  N |     det M_N     | dif vs ((N-1)!!)^2.. | dif vs CH-prod | dif vs 2^-C HH
+----+-----------------+----------------------+----------------+---------------
+  1 |               1 |                    0 |              0 | 0
+  2 |               1 |                    0 |              0 | 0
+  3 |               4 |                    0 |              0 | 0
+  4 |             576 |                    0 |              0 | 0
+  5 |         2985984 |                    0 |              0 | 0
+
+Resume: all dif = 0 for N = 1..5. Formula checked.

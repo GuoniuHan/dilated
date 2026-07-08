@@ -1,0 +1,14 @@
+Proposition 29.4 (prop:hankel-bessel) of d57hankel.tex   [s symbolic]
+H_n(mu) = prod_i (2i)!(s+1/2)_i/(4^i (s+i)_i (s+1)_{2i})   in QQ(s)
+
+  n |  dif = LHS(n) - RHS(n)
+----+-----------------------
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+First-value check  H_2 - (2s+1)/(4(s+1)^2(s+2)) = 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

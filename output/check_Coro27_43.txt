@@ -1,0 +1,9 @@
+Corollary 27.43 (cor:cxbe0): mult-Bessel nu=0, f=(1+x)J_0^2   [even orders]
+
+n=2m=2:  HH=-2 (dif 0)
+n=2m=4:  HH=75/64 (dif 0)
+n=2m=6:  HH=-59535/2097152 (dif 0)
+n=2m=8:  HH=526104203625/18014398509481984 (dif 0)
+n=2m=10:  HH=-12746857115207840625/9903520314283042199192993792 (dif 0)
+
+Resume: all dif = 0. Formula checked.

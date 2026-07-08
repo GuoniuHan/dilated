@@ -1,0 +1,27 @@
+Lemma 10.11 (lem:t3contig) of d05eulershift.tex   [s symbolic, t=3]
+
+Part A -- eq:t3moment (moment recurrence in s)
+  k | dif even = a_{2k}(s) - [a_{2k+2}(s-2)+(s-1)^2 a_{2k}(s-2)]/(s(s-1)) | dif odd
+----+---------------------------------------------------------------------+--------
+  0 |                                                                   0 | 0
+  1 |                                                                   0 | 0
+  2 |                                                                   0 | 0
+  3 |                                                                   0 | 0
+  4 |                                                                   0 | 0
+  5 |                                                                   0 | 0
+  6 |                                                                   0 | 0
+  7 |                                                                   0 | 0
+  8 |                                                                   0 | 0
+  9 |                                                                   0 | 0
+ 10 |                                                                   0 | 0
+
+Part B -- eq:t3detcontig ((s(s-1))^{nund} HH_n^{(1)}(s) = sum_q (s-1)^{2q} G_q(s-2))
+  n | dif = LHS - RHS
+----+----------------
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+Resume: all dif = 0. Lemma checked.

@@ -1,0 +1,12 @@
+Lemma 14.5 (lem:ds-cauchy) of d08xcosds.tex   [M kept symbolic]
+det( 1/(4(M+r-a)^2-1) )_{0<=r,a<N} = closed form.
+
+  N |  dif = LHS(N) - RHS(N)
+----+-----------------------
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+Resume: all dif = 0 for N = 1..5. Formula checked.

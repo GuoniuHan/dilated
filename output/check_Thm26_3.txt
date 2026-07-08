@@ -1,0 +1,12 @@
+Theorem 26.3 (thm:conj54double) of d50chapoton.tex   [exact over QQ]
+det M_N = 2^{tau_N} HH_N(a),  a_{2k}=A_k, a_{2k+1}=B_k,  tau_N=C(nb,2)+C(nn,2)
+
+  N | tau_N |     det M_N     |    HH_N(a)    |  dif
+----+-------+-----------------+---------------+-----
+  1 |     0 |               1 |             1 | 0
+  2 |     0 |               1 |             1 | 0
+  3 |     1 |               4 |             2 | 0
+  4 |     2 |             576 |           144 | 0
+  5 |     4 |         2985984 |        186624 | 0
+
+Resume: all dif = 0 for N = 1..5. Formula checked.

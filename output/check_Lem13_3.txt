@@ -1,0 +1,11 @@
+Lemma 13.3 (lem:oddred) of d07xcosshift.tex   [s kept symbolic]
+
+  n |  dif
+----+-----
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

@@ -1,0 +1,12 @@
+Theorem 23.1 (thm:besselst) of d24Bessel.tex   [s,t kept symbolic]
+HH_n(f_{s,t}) = det(a_{2i+j}) = closed product  (identity in QQ(s,t))
+
+  n |  dif = LHS(n) - RHS(n)
+----+-----------------------
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

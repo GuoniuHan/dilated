@@ -1,0 +1,12 @@
+Proposition 29.1 (prop:hankel-secodd) of d57hankel.tex
+H_n( (2k+1)E_{2k} ) = prod (2k)^{4(n-k)} = 2^{4C(n,2)} prod (k!)^4
+
+  n |            H_n            | dif(form1) | dif(form2) | dif(vals)
+----+---------------------------+------------+------------+----------
+  1 |                         1 |          0 |          0 | 0
+  2 |                        16 |          0 |          0 | 0
+  3 |                     65536 |          0 |          0 | 0
+  4 |              347892350976 |          0 |          0 | 0
+  5 |    7564317991725523009536 |          0 |          0 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

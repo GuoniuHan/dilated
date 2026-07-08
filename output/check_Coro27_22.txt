@@ -1,0 +1,9 @@
+Corollary 27.22 (rank-one, s=-1): f_s=(sin x+1)/cos^2 x + s sin x
+
+n=1:  HH_n=1 (dif 0)
+n=2:  HH_n=6 (dif 0)
+n=3:  HH_n=720 (dif 0)
+n=4:  HH_n=4762800 (dif 0)
+n=5:  HH_n=4073908608000 (dif 0)
+
+Resume: all dif = 0. Formula checked.

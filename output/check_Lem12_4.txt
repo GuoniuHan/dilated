@@ -1,0 +1,32 @@
+Lemma 12.4 (lem:deriv) of d06xcos.tex   [exact, s over QQ(s)]
+
+(A) recurrence:  b_i vs (4i+1)s+8i^2+4i+1 ;  lambda_i vs 2i(2i-1)(s+2i-1)(s+2i)
+  i | dif b_i | dif lambda_i
+----+---------+-------------
+  0 |       0 | --
+  1 |       0 | 0
+  2 |       0 | 0
+  3 |       0 | 0
+  4 |       0 | 0
+  5 |       0 | 0
+
+(B) Delta_{i,a}:  expand T_i = y P_i' - i P_i in P-basis  vs closed form
+(i,a) | deg_s | dif = LHS - RHS  (should be 0)
+------+-------+-------------------------------
+(1,0) |     1 | 0
+(2,0) |     1 | 0
+(2,1) |     1 | 0
+(3,0) |     1 | 0
+(3,1) |     1 | 0
+(3,2) |     1 | 0
+(4,0) |     1 | 0
+(4,1) |     1 | 0
+(4,2) |     1 | 0
+(4,3) |     1 | 0
+(5,0) |     1 | 0
+(5,1) |     1 | 0
+(5,2) |     1 | 0
+(5,3) |     1 | 0
+(5,4) |     1 | 0
+
+Resume: all dif = 0 (A for i=0..5, B for a<i). Formula checked.

@@ -1,0 +1,9 @@
+Corollary 27.5 (cor:bddf): double factorials
+
+n=1:  HH((2m-1)!!) (dif 0)   HH((2m+1)!!) (dif 0)   HH1((2m+1)!!) (dif 0)
+n=2:  HH((2m-1)!!) (dif 0)   HH((2m+1)!!) (dif 0)   HH1((2m+1)!!) (dif 0)
+n=3:  HH((2m-1)!!) (dif 0)   HH((2m+1)!!) (dif 0)   HH1((2m+1)!!) (dif 0)
+n=4:  HH((2m-1)!!) (dif 0)   HH((2m+1)!!) (dif 0)   HH1((2m+1)!!) (dif 0)
+n=5:  HH((2m-1)!!) (dif 0)   HH((2m+1)!!) (dif 0)   HH1((2m+1)!!) (dif 0)
+
+Resume: all dif = 0. Formula checked.

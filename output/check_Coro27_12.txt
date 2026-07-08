@@ -1,0 +1,9 @@
+Corollary 27.12 (cor:10): Euler (s=1,t=0)
+
+n=1:  HH_n (dif 0)   HH_n^(2) (dif 0)
+n=2:  HH_n (dif 0)   HH_n^(2) (dif 0)
+n=3:  HH_n (dif 0)   HH_n^(2) (dif 0)
+n=4:  HH_n (dif 0)   HH_n^(2) (dif 0)
+n=5:  HH_n (dif 0)   HH_n^(2) (dif 0)
+
+Resume: all dif = 0. Formula checked.

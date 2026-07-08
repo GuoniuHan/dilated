@@ -1,0 +1,9 @@
+Corollary 27.36 (algebraic s=1): f=(1+x)/(1-x^2)^{s/2}
+
+n=1:  HH_n=1 (dif 0)
+n=2:  HH_n=2 (dif 0)
+n=3:  HH_n=144 (dif 0)
+n=4:  HH_n=1555200 (dif 0)
+n=5:  HH_n=6584094720000 (dif 0)
+
+Resume: all dif = 0. Formula checked.

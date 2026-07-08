@@ -1,0 +1,12 @@
+Theorem 13.1 (thm:shift) of d07xcosshift.tex   [s kept symbolic]
+HH_n^(1) = ((n-1)!!)^2 HH_n(f)
+
+  n | ((n-1)!!)^2 |  deg_s HH_n^(1) |  dif
+----+-------------+-----------------+-----
+  1 |           1 |               0 | 0
+  2 |           1 |               1 | 0
+  3 |           4 |               3 | 0
+  4 |           9 |               6 | 0
+  5 |          64 |              10 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

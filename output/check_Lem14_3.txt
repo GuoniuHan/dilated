@@ -1,0 +1,12 @@
+Lemma 14.3 (lem:ds-structred) of d08xcosds.tex   [s kept symbolic]
+R_n = 2^{nn} (prod h^{S1}_a) det(Delta_{nb+r,a})
+
+  n |  dif = R_n - structure form
+----+-----------------------------
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

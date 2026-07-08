@@ -1,0 +1,12 @@
+Lemma 13.6 (lem:deg) of d07xcosshift.tex   [s kept symbolic]
+deg_s HH_n^(1) <= C(n,2)
+
+  n | deg_s HH_n^(1) | bound C(n,2) | status
+----+----------------+--------------+-------
+  1 |              0 |            0 | OK
+  2 |              1 |            1 | OK
+  3 |              3 |            3 | OK
+  4 |              6 |            6 | OK
+  5 |             10 |           10 | OK
+
+Resume: all degrees within bound for n = 1..5. Formula checked.

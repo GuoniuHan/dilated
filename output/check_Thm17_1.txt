@@ -1,0 +1,11 @@
+Theorem 17.1 (thm:deriv) of d11springer.tex   [s kept symbolic]
+
+  n | deg_s HH_n | deg_s RHS |  dif
+----+------------+-----------+-----
+  1 |          0 |         0 | 0
+  2 |          2 |         2 | 0
+  3 |          6 |         6 | 0
+  4 |         12 |        12 | 0
+  5 |         20 |        20 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

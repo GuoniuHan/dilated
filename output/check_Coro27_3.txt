@@ -1,0 +1,9 @@
+Corollary 27.3 (cor:b2m1): a_m=binom(2m+1,m)
+
+n=1:  HH_n=1 (dif 0)   HH_n^(1)=3 (dif 0)
+n=2:  HH_n=5 (dif 0)   HH_n^(1)=28 (dif 0)
+n=3:  HH_n=96 (dif 0)   HH_n^(1)=924 (dif 0)
+n=4:  HH_n=6864 (dif 0)   HH_n^(1)=109824 (dif 0)
+n=5:  HH_n=1810432 (dif 0)   HH_n^(1)=47297536 (dif 0)
+
+Resume: all dif = 0. Formula checked.

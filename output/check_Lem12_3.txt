@@ -1,0 +1,19 @@
+Lemma 12.3 (lem:rankdrop) of d06xcos.tex   [exact over QQ]
+
+(A) rank of (a_{2i+j})_{0<=i,j<n} at s=-p  should be <= p
+(B) (s+p)^{n-p} | HH_n   and   prod_j (s+j)^{n-j} | HH_n
+
+(n,p) | rank | p | rank<=p | (s+p)^{n-p}|HH | full-prod|HH
+------+------+---+---------+---------------+-------------
+(2,1) |    1 | 1 |    True |          True | True
+(3,1) |    1 | 1 |    True |          True | True
+(3,2) |    2 | 2 |    True |          True | True
+(4,1) |    1 | 1 |    True |          True | True
+(4,2) |    2 | 2 |    True |          True | True
+(4,3) |    3 | 3 |    True |          True | True
+(5,1) |    1 | 1 |    True |          True | True
+(5,2) |    2 | 2 |    True |          True | True
+(5,3) |    3 | 3 |    True |          True | True
+(5,4) |    4 | 4 |    True |          True | True
+
+Resume: rank<=p and all divisibilities hold for n=1..5. Formula checked.

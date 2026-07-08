@@ -1,0 +1,12 @@
+Proposition 15.1 (prop:sin3) of d10runkone.tex   [exact, s indeterminate over QQ]
+a = [1, 1, 2, 5, 16, 61, 272, 1385] ...  (a_n = E_{n+1})
+
+  n | deg_s | dif = LHS(n)-RHS(n) (should be 0);  LHS(n) factored
+----+-------+-------------------------------------------------------
+  1 |     0 | dif=0 ;  LHS=1
+  2 |     1 | dif=0 ;  LHS=(-3) * (s - 1)
+  3 |     1 | dif=0 ;  LHS=(-540) * (s - 1/3)
+  4 |     1 | dif=0 ;  LHS=(-4082400) * (s - 1/6)
+  5 |     1 | dif=0 ;  LHS=(-3703553280000) * (s - 1/10)
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

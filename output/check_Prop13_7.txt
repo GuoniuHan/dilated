@@ -1,0 +1,12 @@
+Proposition 13.7 (prop:const) of d07xcosshift.tex   [s kept symbolic]
+HH_n^(1)/HH_n(f) is constant in s  (= ((n-1)!!)^2)
+
+  n |   ratio   | s-free? | ((n-1)!!)^2 |  dif
+----+-----------+---------+-------------+-----
+  1 |         1 |     yes |           1 | 0
+  2 |         1 |     yes |           1 | 0
+  3 |         4 |     yes |           4 | 0
+  4 |         9 |     yes |           9 | 0
+  5 |        64 |     yes |          64 | 0
+
+Resume: ratio is a constant equal to ((n-1)!!)^2 for n = 1..5. Formula checked.

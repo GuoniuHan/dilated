@@ -1,0 +1,10 @@
+Example 23.3 (ex:besselJ0Si) of d24Bessel.tex   [(s,t)=(0,1/2), J0+Si]
+
+  n |     HH_n(J0+Si)     | dif(list) | dif(prodform) | dif(thm@0,1/2)
+----+---------------------+-----------+---------------+---------------
+  1 |                   1 |         0 |             0 | 0
+  2 |                 1/6 |         0 |             0 | 0
+  3 |               1/960 |         0 |             0 | 0
+  4 |           1/1693440 |         0 |             0 | 0
+
+Resume: all dif = 0 for n = 1..4. Formula checked.

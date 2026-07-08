@@ -1,0 +1,12 @@
+Lemma 13.4 (lem:div) of d07xcosshift.tex   [s kept symbolic]
+prod_{j=1}^{n-1} (s+j)^{n-j}  divides  HH_n^(1)
+
+  n |               quotient HH_n^(1)/D_n               | remainder (dif)
+----+---------------------------------------------------+----------------
+  1 |                                                 1 | 0
+  2 |                                                 2 | 0
+  3 |                                                64 | 0
+  4 |                                             27648 | 0
+  5 |                                         679477248 | 0
+
+Resume: all remainders = 0 for n = 1..5. Divisibility checked.

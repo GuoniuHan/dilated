@@ -1,0 +1,12 @@
+Theorem 12.1 (thm:allstar) of d06xcos.tex   [exact, s indeterminate over QQ]
+E^{(s+1)}_2 = s + 1,  E^{(s+1)}_4 = 3*s^2 + 8*s + 5
+
+  n | deg_s | dif = LHS(n) - RHS(n)  (should be 0);  LHS(n) factored
+----+-------+----------------------------------------------------------
+  1 |     0 | dif=0 ;  LHS=1
+  2 |     1 | dif=0 ;  LHS=(2) * (s + 1)
+  3 |     3 | dif=0 ;  LHS=(16) * (s + 2) * (s + 1)^2
+  4 |     6 | dif=0 ;  LHS=(3072) * (s + 3) * (s + 2)^2 * (s + 1)^3
+  5 |    10 | dif=0 ;  LHS=(10616832) * (s + 4) * (s + 3)^2 * (s + 2)^3 * (s + 1)^4
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

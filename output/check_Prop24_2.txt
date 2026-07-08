@@ -1,0 +1,12 @@
+Proposition 24.2 (prop:besseldshift) of d24Bessel.tex   [s, t kept symbolic]
+HH_n^(2) = (-1)^n (2n-1)!! / (2^n (s+n)_nb (t+n)_nn) * HH_n
+
+  n |  dif = HH_n^(2) - factor * HH_n
+----+--------------------------------
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

@@ -1,0 +1,11 @@
+Proposition 25.2 (prop:xbe-vdm) of d25xBessel.tex   [exact, nu over QQ(nu)]
+
+  N | order | (A) rowfact dif | (B) vdmred dif  (both should be 0)
+----+-------+-----------------+----------------------------------
+  1 |     2 |               0 | 0
+  2 |     4 |               0 | 0
+  3 |     6 |               0 | 0
+  4 |     8 |               0 | 0
+  5 |    10 |               0 | 0
+
+Resume: all dif = 0 for half-orders 1..5. Formula checked.

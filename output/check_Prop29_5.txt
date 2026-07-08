@@ -1,0 +1,18 @@
+Proposition 29.5 (prop:hankel-springer) of d57hankel.tex   [t,r symbolic]
+(i) J-fraction c_n=t(2n+r), lam_n=(1+t^2)n(n+r-1);  (ii) H_n closed form.
+
+Part (i)  J-fraction orthogonality L[y^j P_i]=0 (j<i): True
+
+Part (ii)  H_n = (1+t^2)^C(n,2) prod_{i<n} i!(r)_i
+  n |  dif = H_n - RHS(n)
+----+--------------------
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+t=r=1 Springer numbers S_n match: True   [1, 1, 3, 11, 57, 361, 2763]
+t=r=1 Hankel values H_n = 2^C(n,2) prod(i!)^2 match: True
+
+Resume: all checks pass for n = 1..5. Formula checked.

@@ -1,0 +1,9 @@
+Corollary 27.20 (cor:xc3): secant s=3, f=(1+x)/cos^4 x
+
+n=1:  HH_n=1 (dif 0)   HH_n^(1)=1 (dif 0)
+n=2:  HH_n=8 (dif 0)   HH_n^(1)=8 (dif 0)
+n=3:  HH_n=1280 (dif 0)   HH_n^(1)=5120 (dif 0)
+n=4:  HH_n=29491200 (dif 0)   HH_n^(1)=265420800 (dif 0)
+n=5:  HH_n=85614133248000 (dif 0)   HH_n^(1)=5479304527872000 (dif 0)
+
+Resume: all dif = 0. Formula checked.

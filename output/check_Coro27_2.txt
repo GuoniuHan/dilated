@@ -1,0 +1,9 @@
+Corollary 27.2 (cor:bcbinom): central binomial coefficients  a_m=binom(2m,m)
+
+n=1:  HH_n=1 (dif 0)   HH_n^(1)=2 (dif 0)
+n=2:  HH_n=8 (dif 0)   HH_n^(1)=20 (dif 0)
+n=3:  HH_n=224 (dif 0)   HH_n^(1)=768 (dif 0)
+n=4:  HH_n=22528 (dif 0)   HH_n^(1)=109824 (dif 0)
+n=5:  HH_n=8200192 (dif 0)   HH_n^(1)=57933824 (dif 0)
+
+Resume: all dif = 0. Formula checked.

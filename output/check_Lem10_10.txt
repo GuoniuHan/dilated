@@ -1,0 +1,11 @@
+Lemma 10.10 (lem:t3trace) of d05eulershift.tex   [a_r symbolic]
+
+  n | nund |            dif = LHS - RHS (identity in a_0..a_{nund-1})
+----+------+---------------------------------------------------------
+  1 |    0 | 0   (empty)
+  2 |    1 | 0
+  3 |    1 | 0
+  4 |    2 | 0
+  5 |    2 | 0
+
+Resume: all dif = 0 for n = 1..5. Identity checked.

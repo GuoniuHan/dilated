@@ -1,0 +1,12 @@
+Theorem 10.6 (thm:t3) of d05eulershift.tex   [s symbolic, t=3]
+
+  n | all factors  | carrier Gamma_n(s)   | Gamma_n |  unique   | collapse | A>0
+    | linear/Q ?   | (root non-integer)   | HH ?    | non-int.? | dif=0 ?  |
+----+--------------+----------------------+---------+-----------+----------+----
+  1 |          yes |            3*s - 3 * |     yes |       yes |      yes | yes
+  2 |          yes |            3*s + 1 * |     yes |       yes |      yes | yes
+  3 |          yes |            5*s + 3 * |     yes |       yes |      yes | yes
+  4 |          yes |           5*s + 11 * |     yes |       yes |      yes | yes
+  5 |          yes |           7*s + 17 * |     yes |       yes |      yes | yes
+
+Resume: all checks pass for n = 1..5. Theorem checked.

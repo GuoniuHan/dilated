@@ -1,0 +1,9 @@
+Corollary 27.28 (cor:der1): Springer derivative s=1
+
+n=1:  HH_n=1 (dif 0)
+n=2:  HH_n=8 (dif 0)
+n=3:  HH_n=6144 (dif 0)
+n=4:  HH_n=1698693120 (dif 0)
+n=5:  HH_n=420810587740569600 (dif 0)
+
+Resume: all dif = 0. Formula checked.

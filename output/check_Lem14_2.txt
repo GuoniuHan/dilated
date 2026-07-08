@@ -1,0 +1,31 @@
+Lemma 14.2 (lem:ds-red) of d08xcosds.tex   [s kept symbolic]
+
+Part 1  (eq:ds-reduction):  HH_n^{(2)} = (-1)^C(nb,2) prod h^{S1}_l * R_n
+  n |  dif = HH_n^{(2)} - reduction
+----+------------------------------
+  1 | 0
+  2 | 0
+  3 | 0
+  4 | 0
+  5 | 0
+
+Part 2  (eq:ds-entry, i>m):  T1*[Phat_i y^m] - 2 S1[y^{m+1} Phat_i']
+ (i,m) |  dif
+-------+-----
+(1,0) | 0
+(2,0) | 0
+(2,1) | 0
+(3,0) | 0
+(3,1) | 0
+(3,2) | 0
+(4,0) | 0
+(4,1) | 0
+(4,2) | 0
+(4,3) | 0
+(5,0) | 0
+(5,1) | 0
+(5,2) | 0
+(5,3) | 0
+(5,4) | 0
+
+Resume: all dif = 0 for n,pairs up to 5. Formula checked.

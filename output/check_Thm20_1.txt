@@ -1,0 +1,12 @@
+Theorem 20.1 (conj:alg) of d18alge.tex   [exact, s indeterminate over QQ]
+a = [1, 1, s, 3*s, 3*s^2 + 6*s, 15*s^2 + 30*s] ...
+
+  n | deg | dif1=LHS-RHS1 | dif2=LHS-RHS2 (both 0);  LHS factored
+----+-----+---------------+----------------------------------------
+  1 |   0 |             0 | 0 ;  LHS=1
+  2 |   1 |             0 | 0 ;  LHS=(2) * s
+  3 |   3 |             0 | 0 ;  LHS=(48) * (s + 2) * s^2
+  4 |   6 |             0 | 0 ;  LHS=(34560) * (s + 4) * (s + 2)^2 * s^3
+  5 |  10 |             0 | 0 ;  LHS=(1393459200) * (s + 6) * (s + 4)^2 * (s + 2)^3 * s^4
+
+Resume: all dif = 0 for n = 1..5. Formula checked.
