@@ -10,11 +10,11 @@ be done.
 
 ## Abstract
 
-For a sequence $\mathbf{a}=(a_0,a_1,\dots)$ we define its *dilated Hankel
-determinant* $\ddot H_n(\mathbf{a})=\det(a_{2i+j})_{0\le i,j\le n-1}$, the minor
+For a sequence $\mathbf{a}=(a_0,a_1,\dots)$ we define its *dilated Hankel determinant*
+$\ddot{H}_n(\mathbf{a})=\det(a_{2i+j})_{0\le i,j\le n-1}$, the minor
 of the infinite Hankel matrix $(a_{i+j})$ formed from the even-indexed rows and
 the first $n$ columns. We prove that, for a broad class of sequences,
-$\ddot H_n$ admits a remarkably simple product evaluation. This mirrors the
+$\ddot{H}_n$ admits a remarkably simple product evaluation. This mirrors the
 behaviour of the classical Hankel determinant $H_n$, but with two key
 distinctions: the class of sequences for which such formulas are known is far
 larger in the classical case; and, whereas $H_n$ enjoys a single universal
@@ -85,7 +85,7 @@ by a pair; `N` bounds both indices.
 
 | Statement | Content | Program | Output |
 |---|---|---|---|
-| Theorem 5.1 (Gaussian family) | $\ddot H_n=(2c)^{\binom n2}\prod_{k<n}k!$ for $f=e^{cx+x^2/2}$ | [`check_Thm5_1.sage`](program/check_Thm5_1.sage) | [`.txt`](output/check_Thm5_1.txt) |
+| Theorem 5.1 (Gaussian family) | $\ddot{H}_n=(2c)^{\binom n2}\prod_{k<n}k!$ for $f=e^{cx+x^2/2}$ | [`check_Thm5_1.sage`](program/check_Thm5_1.sage) | [`.txt`](output/check_Thm5_1.txt) |
 | Lemma 5.3 (mixed Hermite moments) | $\mathcal L[\mathrm{He}_p(c+z)\mathrm{He}_q(z)]=q!\binom{p}{q}c^{p-q}$ | [`check_Lem5_3.sage`](program/check_Lem5_3.sage) | [`.txt`](output/check_Lem5_3.txt) |
 | Lemma 5.4 (triangularising family) | $\mathcal L[\Phi_i(z)\mathrm{He}_j(z)]=j!\binom{i}{j-i}(2c)^{2i-j}$ | [`check_Lem5_4.sage`](program/check_Lem5_4.sage) | [`.txt`](output/check_Lem5_4.txt) |
 
