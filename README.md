@@ -1,6 +1,7 @@
 # Dilated Hankel determinants
 
-*Guo-Niu Han*
+*Guo-Niu Han* — 2026/07/08
+
 
 **Status.** The intention is to provide programs that check every formula
 displayed in the paper. As of today this is only partially done; the remaining
