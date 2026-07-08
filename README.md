@@ -4,8 +4,9 @@
 
 
 **Status.** The intention is to provide programs that check every formula
-displayed in the paper. As of today Section 4 (the Beta family) is complete; the
-remaining sections are still to be done.
+displayed in the paper. As of today Section 4 (the Beta family) is complete and
+Section 5 (the Gaussian family) is under way; the remaining sections are still to
+be done.
 
 ## Abstract
 
@@ -50,15 +51,16 @@ program in [`program/`](program). Running
 sage program/check_XXX.sage N
 ```
 
-prints, for every $n=1,\dots,N$, the left-hand side $\mathrm{LHS}(n)$ (the
-determinant, computed directly), the right-hand side $\mathrm{RHS}(n)$ (the
-claimed closed form), and their difference $\mathrm{dif}=\mathrm{LHS}(n)-\mathrm{RHS}(n)$;
+prints, for every index up to $N$ (a single $n=1,\dots,N$ for a determinant
+evaluation, or a pair such as $(p,q)$ for a moment identity), the left-hand side
+$\mathrm{LHS}$ (computed directly), the right-hand side $\mathrm{RHS}$ (the
+claimed closed form), and their difference $\mathrm{dif}=\mathrm{LHS}-\mathrm{RHS}$;
 it ends with a one-line résumé stating whether all differences vanish. All
-arithmetic is exact (rational, or symbolic where a $\Gamma$-value occurs), so
-`dif = 0` is a genuine identity, not a numerical approximation. The parameters
-($\rho,\alpha,\beta$, the step $r$, or the row indices $x_i$) are set at the top
-of each file and may be freely changed. A saved run with `N = 5` is stored
-alongside each program in [`output/`](output).
+arithmetic is exact (rational, or symbolic in a parameter such as $c$, or in a
+$\Gamma$-value), so `dif = 0` is a genuine identity, not a numerical
+approximation. The parameters ($\rho,\alpha,\beta$, the step $r$, the row indices
+$x_i$, …) are set at the top of each file and may be freely changed. A saved run
+with `N = 5` is stored alongside each program in [`output/`](output).
 
 ### Section 4 — the Beta family (`d02beta.tex`)
 
@@ -74,4 +76,16 @@ alongside each program in [`output/`](output).
 | Identity (4.15) | $a_m=(2m+1)!!$ | [`check_Eq4_15.sage`](program/check_Eq4_15.sage) | [`.txt`](output/check_Eq4_15.txt) |
 | Identity (4.16) | $a_m=(2m)!/m!$ | [`check_Eq4_16.sage`](program/check_Eq4_16.sage) | [`.txt`](output/check_Eq4_16.txt) |
 | Identity (4.17) | $a_m=\binom{2m+1}{m}$ | [`check_Eq4_17.sage`](program/check_Eq4_17.sage) | [`.txt`](output/check_Eq4_17.txt) |
+
+### Section 5 — the Gaussian family (`d03invo.tex`)
+
+Here $c$ is kept symbolic, so every check is a polynomial identity in $c$. The
+two lemmas are moment identities of the Gaussian functional $\mathcal L$, indexed
+by a pair; `N` bounds both indices.
+
+| Statement | Content | Program | Output |
+|---|---|---|---|
+| Theorem 5.1 (Gaussian family) | $\ddot H_n=(2c)^{\binom n2}\prod_{k<n}k!$ for $f=e^{cx+x^2/2}$ | [`check_Thm5_1.sage`](program/check_Thm5_1.sage) | [`.txt`](output/check_Thm5_1.txt) |
+| Lemma 5.3 (mixed Hermite moments) | $\mathcal L[\mathrm{He}_p(c+z)\mathrm{He}_q(z)]=q!\binom{p}{q}c^{p-q}$ | [`check_Lem5_3.sage`](program/check_Lem5_3.sage) | [`.txt`](output/check_Lem5_3.txt) |
+| Lemma 5.4 (triangularising family) | $\mathcal L[\Phi_i(z)\mathrm{He}_j(z)]=j!\binom{i}{j-i}(2c)^{2i-j}$ | [`check_Lem5_4.sage`](program/check_Lem5_4.sage) | [`.txt`](output/check_Lem5_4.txt) |
 
