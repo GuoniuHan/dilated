@@ -1,0 +1,12 @@
+Corollary 4.6 (cor:catalan) of d02beta.tex
+parameter: r = 2
+
+  n |            LHS(n)            |            RHS(n)            |  dif
+----+-----------------------------+-----------------------------+-----
+  1 |                           1 |                           1 | 0
+  2 |                           3 |                           3 | 0
+  3 |                          32 |                          32 | 0
+  4 |                        1232 |                        1232 | 0
+  5 |                      172032 |                      172032 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

@@ -1,0 +1,12 @@
+Corollary 4.7 (cor:cbinom) of d02beta.tex
+parameter: r = 2
+
+  n |            LHS(n)            |            RHS(n)            |  dif
+----+-----------------------------+-----------------------------+-----
+  1 |                           1 |                           1 | 0
+  2 |                           8 |                           8 | 0
+  3 |                         224 |                         224 | 0
+  4 |                       22528 |                       22528 | 0
+  5 |                     8200192 |                     8200192 | 0
+
+Resume: all dif = 0 for n = 1..5. Formula checked.

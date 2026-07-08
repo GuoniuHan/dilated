@@ -4,8 +4,8 @@
 
 
 **Status.** The intention is to provide programs that check every formula
-displayed in the paper. As of today this is only partially done; the remaining
-formulas are still to be completed.
+displayed in the paper. As of today Section 4 (the Beta family) is complete; the
+remaining sections are still to be done.
 
 ## Abstract
 
@@ -30,7 +30,7 @@ numbers; and a multiplicative Bessel family. As an application, we settle a
 conjecture of Chapoton and the author on the roots of the Poupard and Kreweras
 polynomials.
 
-## Programs
+## Programs (old, keep, we will work later)
 
 - [`r1root.sage`](r1root.sage) (Sage source) — roots of the Poupard and Kreweras
   polynomials (Chapoton–Han conjecture)
@@ -40,3 +40,38 @@ polynomials.
   reciprocal-sine, elliptic, algebraic, squared-algebraic, Bessel and
   multiplicative-Bessel families), with single and double shifts
 - [`r2coro.txt`](r2coro.txt) (output)
+
+## Check formulas
+
+Each formula of the paper has a standalone [SageMath](https://www.sagemath.org)
+program in [`program/`](program). Running
+
+```
+sage program/check_XXX.sage N
+```
+
+prints, for every $n=1,\dots,N$, the left-hand side $\mathrm{LHS}(n)$ (the
+determinant, computed directly), the right-hand side $\mathrm{RHS}(n)$ (the
+claimed closed form), and their difference $\mathrm{dif}=\mathrm{LHS}(n)-\mathrm{RHS}(n)$;
+it ends with a one-line résumé stating whether all differences vanish. All
+arithmetic is exact (rational, or symbolic where a $\Gamma$-value occurs), so
+`dif = 0` is a genuine identity, not a numerical approximation. The parameters
+($\rho,\alpha,\beta$, the step $r$, or the row indices $x_i$) are set at the top
+of each file and may be freely changed. A saved run with `N = 5` is stored
+alongside each program in [`output/`](output).
+
+### Section 4 — the Beta family (`d02beta.tex`)
+
+| Statement | Sequence / parameters | Program | Output |
+|---|---|---|---|
+| Theorem 4.1 (general, arbitrary nodes $x_i$) | $a_m=a_0\rho^m(\alpha)_m/(\beta)_m$ | [`check_Thm4_1.sage`](program/check_Thm4_1.sage) | [`.txt`](output/check_Thm4_1.txt) |
+| Proposition 4.2 (degenerate, $\beta$ absent) | $a_m=a_0\rho^m(\alpha)_m$ | [`check_Prop4_2.sage`](program/check_Prop4_2.sage) | [`.txt`](output/check_Prop4_2.txt) |
+| Corollary 4.3 (dilated Beta family) | $a_m=a_0\rho^m(\alpha)_m/(\beta)_m$ | [`check_Coro4_3.sage`](program/check_Coro4_3.sage) | [`.txt`](output/check_Coro4_3.txt) |
+| Corollary 4.4 (factorials) | $a_m=(m+r)!$ | [`check_Coro4_4.sage`](program/check_Coro4_4.sage) | [`.txt`](output/check_Coro4_4.txt) |
+| Corollary 4.5 (Gamma/Laguerre continuation) | $a_m=\Gamma(m+\alpha+1)$ | [`check_Coro4_5.sage`](program/check_Coro4_5.sage) | [`.txt`](output/check_Coro4_5.txt) |
+| Corollary 4.6 ($r$-step Catalan) | $a_m=C_m=\binom{2m}{m}/(m+1)$ | [`check_Coro4_6.sage`](program/check_Coro4_6.sage) | [`.txt`](output/check_Coro4_6.txt) |
+| Corollary 4.7 ($r$-step central binomial) | $a_m=\binom{2m}{m}$ | [`check_Coro4_7.sage`](program/check_Coro4_7.sage) | [`.txt`](output/check_Coro4_7.txt) |
+| Identity (4.15) | $a_m=(2m+1)!!$ | [`check_Eq4_15.sage`](program/check_Eq4_15.sage) | [`.txt`](output/check_Eq4_15.txt) |
+| Identity (4.16) | $a_m=(2m)!/m!$ | [`check_Eq4_16.sage`](program/check_Eq4_16.sage) | [`.txt`](output/check_Eq4_16.txt) |
+| Identity (4.17) | $a_m=\binom{2m+1}{m}$ | [`check_Eq4_17.sage`](program/check_Eq4_17.sage) | [`.txt`](output/check_Eq4_17.txt) |
+
