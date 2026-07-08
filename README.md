@@ -2,15 +2,6 @@
 
 *Guo-Niu Han* — 2026/07/08
 
-
-**Status.** Complete. Every displayed theorem, proposition, lemma, corollary,
-and named identity of the paper (Sections 4–27 and 29) now has a standalone
-SageMath checker in [`program/`](program), with a saved run in
-[`output/`](output); all of them report `dif = 0`. Sections 1–3 (introduction,
-preliminaries, the reduction principles) and Section 28 (the
-Lindström–Gessel–Viennot discussion) state no determinant evaluation to check,
-and Section 30 is the concluding remarks.
-
 ## Abstract
 
 For a sequence $`\mathbf{a}=(a_0,a_1,\dots)`$ we define its *dilated Hankel determinant*
@@ -33,17 +24,6 @@ a new Catalan determinant proved by condensation; a Bessel analogue of the Euler
 numbers; and a multiplicative Bessel family. As an application, we settle a
 conjecture of Chapoton and the author on the roots of the Poupard and Kreweras
 polynomials.
-
-## Programs (old, keep, we will work later)
-
-- [`r1root.sage`](r1root.sage) (Sage source) — roots of the Poupard and Kreweras
-  polynomials (Chapoton–Han conjecture)
-- [`r1root.txt`](r1root.txt) (output)
-- [`r2coro.sage`](r2coro.sage) (Sage source) — dilated Hankel determinants for
-  every corollary (Beta, Gaussian, Euler, secant, rank-one, Springer,
-  reciprocal-sine, elliptic, algebraic, squared-algebraic, Bessel and
-  multiplicative-Bessel families), with single and double shifts
-- [`r2coro.txt`](r2coro.txt) (output)
 
 ## Check formulas
 
@@ -300,6 +280,7 @@ All checks use exact rational arithmetic.
 | Lemma 26.2 (`lem:rhored`) | [`check_Lem26_2.sage`](program/check_Lem26_2.sage) | [`.txt`](output/check_Lem26_2.txt) |
 | Theorem 26.3 (`thm:conj54double`) | [`check_Thm26_3.sage`](program/check_Thm26_3.sage) | [`.txt`](output/check_Thm26_3.txt) |
 | Lemma 26.5 (`lem:rhomom`) | [`check_Lem26_5.sage`](program/check_Lem26_5.sage) | [`.txt`](output/check_Lem26_5.txt) |
+| Link between Chapoton–Han matrix and dilated matrix | [`r1root.sage`](program/r1root.sage) | [`.txt`](output/r1root.txt) |
 
 ### Section 27 — Corollaries: explicit evaluations (`d51coro.tex`)
 
