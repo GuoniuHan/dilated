@@ -1,5 +1,5 @@
 Proposition 9.1 (prop:shift) of d05eulershift.tex   [s kept symbolic, t=1]
-HH_n^{(1)} = det(a_{2i+j+1}) = Ktilde_n * (Pochhammer products), eq (9.2).
+HH_n^{(1)} = det(a_{2i+j+1}) = K_n * (Pochhammer products), eq (9.2).
 
   n |                     LHS(n) = HH_n^{(1)}                      |     dif
 ----+--------------------------------------------------------------+--------

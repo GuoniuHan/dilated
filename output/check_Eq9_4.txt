@@ -1,12 +1,14 @@
-Equation (9.4) (eq:shiftconst) of d05eulershift.tex   [t=1]
-Ktilde_n from formula vs first values vs det|_{s=0}/poch|_{s=0}.
+Equation (9.4) (eq:shiftmonic) of d05eulershift.tex   [s kept symbolic, t=1]
+HH_n^{(1)} = Ktilde_n * R_n(s), R_n monic.  Ktilde_n sign checked vs (-1)^binom(nb,2).
 
-  n |        Ktilde_n (formula)        | dif(vals) | dif(det) | dif(1/2poch)
-----+----------------------------------+-----------+----------+-------------
-  1 |                                1 |         0 |        0 | 0
-  2 |                               12 |         0 |        0 | 0
-  3 |                             1440 |         0 |        0 | 0
-  4 |                          9676800 |         0 |        0 | 0
-  5 |                    7023034368000 |         0 |        0 | 0
+  n |       Ktilde_n        | sign ok | Kt_n>0|   dif
+----+-----------------------+---------+-------+------
+  1 |                     1 |    True |  True | 0
+  2 |                     3 |    True |  True | 0
+  3 |                  -180 |    True | False | 0
+  4 |                -37800 |    True | False | 0
+  5 |           -6858432000 |    True | False | 0
 
-Resume: all dif = 0 for n = 1..5. Formula checked.
+Resume: all dif = 0 for n = 1..5. Identity HH_n^{(1)} = Ktilde_n R_n checked.
+        (Ktilde_n>0 only for n=1,2; sign(Ktilde_n) = (-1)^binom(ceil(n/2),2),
+         as stated in the text after Proposition 9.1.)

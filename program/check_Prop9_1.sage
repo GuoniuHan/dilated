@@ -9,11 +9,11 @@
 # The SINGLE-shifted dilated determinant is
 #   HH_n^{(1)} = det(a_{2i+j+1})_{0<=i,j<=n-1}.
 # Proposition 9.1, eq (9.2), asserts the closed form
-#   HH_n^{(1)} = Ktilde_n * prod_{j=1}^{nn} ((s+1)/2)_j^2
+#   HH_n^{(1)} = K_n * prod_{j=1}^{nn} ((s+1)/2)_j^2
 #                        * prod_{j=1}^{nn-1} (s/2+1)_j
 #                        * prod_{j=1}^{nb-1} ((1-s)/2)_j,
-# with nb = ceil(n/2), nn = floor(n/2), and Ktilde_n a positive scalar
-# independent of s given by eq (9.4) (eq:shiftconst); it is substituted here.
+# with nb = ceil(n/2), nn = floor(n/2), and K_n a positive scalar
+# independent of s given by eq (9.3) (eq:shiftconst); it is substituted here.
 #
 # s is kept SYMBOLIC (indeterminate over QQ), so each LHS(n)=RHS(n) is checked
 # as a polynomial identity in s, valid for ALL s (on the line t=1).
@@ -51,8 +51,8 @@ def LHS(n, a):
     # single shift: column index advanced by one -> a_{2i+j+1}
     return matrix(Rs, n, n, lambda i, j: a[2 * i + j + 1]).det()
 
-def Ktilde(n):
-    # eq (9.4), eq:shiftconst: the positive scalar independent of s.
+def Kconst(n):
+    # eq (9.3), eq:shiftconst: the positive scalar independent of s.
     nb = (n + 1) // 2
     nn = n // 2
     dfact = prod(2 * k - 1 for k in range(1, n + 1))          # (2n-1)!!
@@ -69,7 +69,7 @@ def RHS(n):
     pochpart = prod(poch((s + 1) / 2, j) ** 2 for j in range(1, nn + 1)) \
              * prod(poch(s / 2 + 1, j) for j in range(1, nn)) \
              * prod(poch((1 - s) / 2, j) for j in range(1, nb))
-    return Ktilde(n) * pochpart
+    return Kconst(n) * pochpart
 
 if __name__ == "__main__":
     N = int(sys.argv[1]) if len(sys.argv) > 1 else 5
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     a = build_a(3 * N)                    # max index needed is 2(n-1)+(n-1)+1 = 3n-2
 
     print("Proposition 9.1 (prop:shift) of d05eulershift.tex   [s kept symbolic, t=1]")
-    print("HH_n^{(1)} = det(a_{2i+j+1}) = Ktilde_n * (Pochhammer products), eq (9.2).")
+    print("HH_n^{(1)} = det(a_{2i+j+1}) = K_n * (Pochhammer products), eq (9.2).")
     print("")
     print("  n |                     LHS(n) = HH_n^{(1)}                      |     dif")
     print("----+--------------------------------------------------------------+--------")

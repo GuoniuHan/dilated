@@ -14,8 +14,8 @@ distinctions: the class of sequences for which such formulas are known is far
 larger in the classical case; and, whereas $`H_n`$ enjoys a single universal
 evaluation — the Heilermann formula via the Jacobi continued fraction — no
 analogous general method exists for the dilated determinant, which is therefore
-considerably more challenging. Our evaluations instead rest on six reduction
-principles developed here, four of general scope and two of a more specialised
+considerably more challenging. Our evaluations instead rest on six methods
+developed here, four of general scope and two of a more specialised
 nature. The cases treated include the factorial numbers, the Catalan and
 central binomial coefficients; the Euler numbers and a one-parameter secant
 family; the involution numbers; the Springer numbers along with elliptic and
@@ -118,8 +118,8 @@ top; keep $`(t-s)/2`$ away from the non-negative integers or the family degenera
 |---|---|---|
 | Proposition 9.1 (`prop:shift`) | [`check_Prop9_1.sage`](program/check_Prop9_1.sage) | [`.txt`](output/check_Prop9_1.txt) |
 | Lemma 9.2 (`lem:mixedconn`) | [`check_Lem9_2.sage`](program/check_Lem9_2.sage) | [`.txt`](output/check_Lem9_2.txt) |
-| equation (`9.3`) (`eq:shiftmonic`) | [`check_Eq9_3.sage`](program/check_Eq9_3.sage) | [`.txt`](output/check_Eq9_3.txt) |
-| equation (`9.4`) (`eq:shiftconst`) | [`check_Eq9_4.sage`](program/check_Eq9_4.sage) | [`.txt`](output/check_Eq9_4.txt) |
+| equation (`9.3`) (`eq:shiftconst`) | [`check_Eq9_3.sage`](program/check_Eq9_3.sage) | [`.txt`](output/check_Eq9_3.txt) |
+| equation (`9.4`) (`eq:shiftmonic`) | [`check_Eq9_4.sage`](program/check_Eq9_4.sage) | [`.txt`](output/check_Eq9_4.txt) |
 
 ### Section 10 — the single shift of the Euler family on the line $`t=3`$
 

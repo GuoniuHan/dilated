@@ -1,14 +1,12 @@
-Equation (9.3) (eq:shiftmonic) of d05eulershift.tex   [s kept symbolic, t=1]
-HH_n^{(1)} = K_n * R_n(s), R_n monic.  K_n sign checked vs (-1)^binom(nb,2).
+Equation (9.3) (eq:shiftconst) of d05eulershift.tex   [t=1]
+K_n from formula vs first values vs det|_{s=0}/poch|_{s=0}.
 
-  n |          K_n          | sign ok | K_n>0 |   dif
-----+-----------------------+---------+-------+------
-  1 |                     1 |    True |  True | 0
-  2 |                     3 |    True |  True | 0
-  3 |                  -180 |    True | False | 0
-  4 |                -37800 |    True | False | 0
-  5 |           -6858432000 |    True | False | 0
+  n |          K_n (formula)           | dif(vals) | dif(det) | dif(1/2poch)
+----+----------------------------------+-----------+----------+-------------
+  1 |                                1 |         0 |        0 | 0
+  2 |                               12 |         0 |        0 | 0
+  3 |                             1440 |         0 |        0 | 0
+  4 |                          9676800 |         0 |        0 | 0
+  5 |                    7023034368000 |         0 |        0 | 0
 
-Resume: all dif = 0 for n = 1..5. Identity HH_n^{(1)} = K_n R_n checked.
-        (K_n>0 only for n=1,2; sign(K_n) = (-1)^binom(ceil(n/2),2) --
-         eq:shiftmonic's wording 'positive constant K_n' should be qualified.)
+Resume: all dif = 0 for n = 1..5. Formula checked.

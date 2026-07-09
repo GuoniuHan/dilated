@@ -1,20 +1,27 @@
-# check_Eq9_4.sage -- verification of equation (9.4) (eq:shiftconst) of d05eulershift.tex.
+# check_Eq9_4.sage -- verification of equation (9.4) (eq:shiftmonic) of d05eulershift.tex.
 #
-# The scalar Ktilde_n of Proposition 9.1 (single shift, line t=1) is fixed by
-# the secant/tangent specialisation s=0, giving eq (9.4):
-#   Ktilde_n = (2n-1)!! * 2^{-binom(n,2)} * prod_{k=1}^{n-1} k! (2k)!
-#              / [ prod_{j=1}^{nn} (1/2)_j^2 * prod_{j=1}^{nn-1} j! * prod_{j=1}^{nb-1} (1/2)_j ],
-# with nb = ceil(n/2), nn = floor(n/2), and (1/2)_j = (2j-1)!!/2^j = (2j)!/(4^j j!).
-# The first values are stated to be
-#   Ktilde_n = 1, 12, 1440, 9676800, 7023034368000, 149513097738977280000, ...
+# Clearing the Pochhammer symbols in eq (9.2) (Proposition 9.1) writes the
+# single shift on the line t=1 as
+#   HH_n^{(1)} = Ktilde_n * R_n(s),
+# where R_n(s) is the MONIC product of linear forms (eq (9.4), eq:shiftmonic):
+#   R_n(s) = [ prod_{j=1}^{nn}   prod_{k=0}^{j-1} (s+2k+1) ]^2   (odd shifts, doubled)
+#          *   prod_{j=1}^{nn-1} prod_{k=1}^{j}   (s+2k)         (even shifts)
+#          *   prod_{j=1}^{nb-1} prod_{k=1}^{j}   (s-2k+1),      (back shifts)
+# with nb = ceil(n/2), nn = floor(n/2), and Ktilde_n a constant independent of s.
 #
-# This checker verifies (9.4) in THREE independent ways for each n:
-#   (i)  the closed formula equals the tabulated first values;
-#   (ii) the closed formula equals the s=0 specialisation of the determinant
-#        divided by the Pochhammer products, i.e. it really is the scalar
-#        Ktilde_n of eq (9.2), computed directly from HH_n^{(1)}|_{s=0};
-#   (iii) both forms of the denominator (2j-1)!!/2^j and (2j)!/(4^j j!) agree.
-# All differences must be 0 (exact rational arithmetic).
+# This checker confirms (a) that R_n divides HH_n^{(1)} with an s-FREE quotient
+# Ktilde_n (the substantive claim of (9.4)), by testing dif = HH_n^{(1)} - Ktilde_n R_n = 0
+# as a polynomial in s, and (b) reports the sign of Ktilde_n.
+#
+# As stated in the text after Proposition 9.1, Ktilde_n is positive only for
+# n=1,2; its sign is exactly (-1)^{binom(nb,2)} = (-1)^{binom(ceil(n/2),2)},
+# inherited from the back-shift Pochhammer (( 1-s )/2)_j of eq:shiftpoch, each
+# factor of which contributes (-1)^j when cleared to the monic form (s-2k+1).
+# The scalar K_n of eq:shiftpoch/shiftconst genuinely IS positive; only
+# the monic-form constant Ktilde_n alternates in sign. The checker verifies this
+# sign prediction along with the identity itself.
+#
+# s is kept SYMBOLIC (indeterminate over QQ).
 #
 # Run:  sage check_Eq9_4.sage N
 
@@ -23,15 +30,12 @@ import sys
 Rs = PolynomialRing(QQ, 's')
 s = Rs.gen()
 
-def poch(x, k):
-    return prod(x + j for j in range(k))
-
 def build_a(M):
     Rx = PowerSeriesRing(Rs, 'x', default_prec=M + 2)
     x = Rx.gen()
     logcos = cos(x).log()
-    Ssec = (-(s + 1) * logcos).exp()
-    Tsec = (-2 * logcos).exp()
+    Ssec = (-(s + 1) * logcos).exp()      # cos^{-(s+1)}
+    Tsec = (-2 * logcos).exp()            # cos^{-2}, t=1
     a = []
     for m in range(M + 1):
         if m % 2 == 0:
@@ -40,61 +44,48 @@ def build_a(M):
             a.append(factorial(m - 1) * Tsec[m - 1])
     return a
 
-def Ktilde_formula(n):
-    # eq (9.4) as written, with (1/2)_j via poch().
+def HH1(n, a):
+    return matrix(Rs, n, n, lambda i, j: a[2 * i + j + 1]).det()
+
+def Rmonic(n):
     nb = (n + 1) // 2
     nn = n // 2
-    dfact = prod(2 * k - 1 for k in range(1, n + 1))          # (2n-1)!!
-    num = dfact * QQ(2) ** (-binomial(n, 2)) \
-          * prod(factorial(k) * factorial(2 * k) for k in range(1, n))
-    den = prod(poch(QQ(1) / 2, j) ** 2 for j in range(1, nn + 1)) \
-          * prod(factorial(j) for j in range(1, nn)) \
-          * prod(poch(QQ(1) / 2, j) for j in range(1, nb))
-    return num / den
-
-def Ktilde_from_det(n, a):
-    # eq (9.2) at s=0:  HH_n^{(1)}|_{s=0} / (Pochhammer products)|_{s=0}.
-    nb = (n + 1) // 2
-    nn = n // 2
-    det0 = matrix(QQ, n, n,
-                  lambda i, j: a[2 * i + j + 1].subs(s=0)).det()
-    poch0 = prod(poch(QQ(1) / 2, j) ** 2 for j in range(1, nn + 1)) \
-          * prod(poch(QQ(1), j) for j in range(1, nn)) \
-          * prod(poch(QQ(1) / 2, j) for j in range(1, nb))
-    return det0 / poch0
-
-def halfpoch_alt(j):
-    # the two claimed closed forms of (1/2)_j
-    return (prod(2 * k - 1 for k in range(1, j + 1)) / QQ(2) ** j,
-            factorial(2 * j) / (QQ(4) ** j * factorial(j)))
-
-FIRST = [1, 12, 1440, 9676800, 7023034368000, 149513097738977280000]
+    p = Rs(prod(prod(s + 2 * k + 1 for k in range(0, j)) for j in range(1, nn + 1)) ** 2)
+    p *= prod(prod(s + 2 * k for k in range(1, j + 1)) for j in range(1, nn))      # j=1..nn-1
+    p *= prod(prod(s - 2 * k + 1 for k in range(1, j + 1)) for j in range(1, nb))  # j=1..nb-1
+    return Rs(p)
 
 if __name__ == "__main__":
     N = int(sys.argv[1]) if len(sys.argv) > 1 else 5
 
     a = build_a(3 * N)
 
-    print("Equation (9.4) (eq:shiftconst) of d05eulershift.tex   [t=1]")
-    print("Ktilde_n from formula vs first values vs det|_{s=0}/poch|_{s=0}.")
+    print("Equation (9.4) (eq:shiftmonic) of d05eulershift.tex   [s kept symbolic, t=1]")
+    print("HH_n^{(1)} = Ktilde_n * R_n(s), R_n monic.  Ktilde_n sign checked vs (-1)^binom(nb,2).")
     print("")
-    print("  n |        Ktilde_n (formula)        | dif(vals) | dif(det) | dif(1/2poch)")
-    print("----+----------------------------------+-----------+----------+-------------")
+    print("  n |       Ktilde_n        | sign ok | Kt_n>0|   dif")
+    print("----+-----------------------+---------+-------+------")
 
     all_zero = True
     for n in range(1, N + 1):
-        Kf = Ktilde_formula(n)
-        d_vals = Kf - FIRST[n - 1] if n - 1 < len(FIRST) else QQ(0)
-        d_det = Kf - Ktilde_from_det(n, a)
-        # cross-check both closed forms of (1/2)_j for all j up to n
-        d_half = max((abs(p1 - p2) for j in range(1, n + 1)
-                      for (p1, p2) in [halfpoch_alt(j)]), default=QQ(0))
-        if d_vals != 0 or d_det != 0 or d_half != 0:
+        L = HH1(n, a)
+        Rn = Rmonic(n)
+        q = L / Rn                              # Ktilde_n, an element of Frac(Rs)
+        is_const = q in QQ
+        Kn = QQ(q) if is_const else None
+        d = Rs(L - Kn * Rn) if is_const else Rs(1)
+        if d != 0:
             all_zero = False
-        print("%3d | %32s | %9s | %8s | %s" % (n, Kf, d_vals, d_det, d_half))
+        nb = (n + 1) // 2
+        predicted_sign = (-1) ** binomial(nb, 2)
+        sign_ok = is_const and (sign(Kn) == predicted_sign)
+        print("%3d | %21s | %7s | %5s | %s"
+              % (n, Kn, sign_ok, (Kn > 0), d))
 
     print("")
     if all_zero:
-        print("Resume: all dif = 0 for n = 1..%d. Formula checked." % N)
+        print("Resume: all dif = 0 for n = 1..%d. Identity HH_n^{(1)} = Ktilde_n R_n checked." % N)
+        print("        (Ktilde_n>0 only for n=1,2; sign(Ktilde_n) = (-1)^binom(ceil(n/2),2),")
+        print("         as stated in the text after Proposition 9.1.)")
     else:
         print("Resume: some dif != 0. Formula NOT checked!")
